@@ -1,0 +1,87 @@
+# Site settings
+title: Megalac
+email: gerencia.megalac@gmail.com
+description: > # this means to ignore newlines until "baseurl:"
+  Mercantil
+  Ganadera y
+  Láctea S.A.S.
+url: http://localhost:4000 #http://megalac.github.io # the base hostname & protocol for your site
+
+# Build settings
+theme: minima
+markdown: kramdown
+highlighter: rouge
+timezone: America/Bogota
+permalink: /:categories/:year-:month-:day/:title/
+#defaults: # Default value is [].
+#  -
+#    scope:
+#      path: "" # an empty string here means all files in the project
+#      type: pages | posts | drafts | other_collections
+#    values:
+#      layout: default
+#      published: true # Set to false if you don’t want a specific post to show up when the site is generated.
+#      categories:
+#        - one
+#        - two
+#      tags: some tags separated by spaces
+#      other_liquid_vars: "Whatever"
+#  -
+#    scope:
+#    values:
+
+# Liquid build settings
+#profile: false # Generate a Liquid rendering profile to identify perfomance bottlenecks.
+#liguid:
+#  error_mode: warn # lax: ignore all | warn: output warnings | strict: output error and stop the build.
+
+# Kramdown (Markdown Processor) build settings
+kramdown:
+  input: GFM # Github-Flavored Markdown.
+  syntax_highlighter: rouge # Needed for fenced code blocks with ~~~ .
+
+# SASS build settings
+#sass:
+#  sass_dir: _sass
+#  style: :nested | :expanded | :compact | :compressed
+
+# Serve settings
+#host: 127.0.0.1 # Host IP or name.
+#baseurl: "" # the subpath of your site, e.g. /blog/
+#port: 4000
+#detach: false # detach server from terminal
+
+# Directories
+#source:       .
+#destination:  ./_site # Destination is cleaned before each Jekyll build.
+#plugins_dir:  _plugins
+#layouts_dir:  _layouts
+#data_dir:     _data
+#includes_dir: _includes
+
+# Handling Reading
+#safe:         false # Disable custom plugins. Github Pages forces this to true.
+#include:      [".htaccess"] # Include these directories & files. Dot files are excluded by default.
+exclude:      [Gemfile, Gemfile.lock] # Exclude these directories & files.
+#keep_files:   [".git", ".svn"] # Keep these directories & files in the destination directory.
+#encoding:     "utf-8"
+#markdown_ext: "markdown,mkdown,mkdn,mkd,md"
+
+# Blogs
+#show_drafts: null
+#limit_posts: 0
+#future:      false # Publish posts with a future date.
+#unpublished: false
+#lsi: false # Use this if you plan on using Jekyll's "related posts" feature.
+#excerpt_separator: "\n\n" # Used to detect when the blog's excerpt finishes.
+
+# Collections
+#collections:
+#  my_collection1:
+#    output: true # set to true to export the collection as html. Otherwise, use it as data inside other places.
+#    permalink: /awesome/:path/ # _my_collection1/subdir/file1.md will output as <dst>/awesome/subdir/file1/index.html .
+#          default is /:collection/:path
+
+# Custom vars
+twitter_username: euphoric_juank
+github_username:  ruluk
