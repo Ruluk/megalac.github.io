@@ -2,17 +2,21 @@
 title: Megalac
 email: gerencia.megalac@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Mercantil
-  Ganadera y
-  Láctea S.A.S.
-url: https://megalac.github.io # the base hostname & protocol for your site
+  Mercantil Ganadera y Láctea S.A.S. Write an awesome description for
+  your new site here. You can edit this line in _config.yml. It will
+  appear in your document head meta (for Google search results) and in
+  your feed.xml site description.
+url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
 theme: minima
 markdown: kramdown
+gems: # Default value is [].
+  - jekyll-feed
 highlighter: rouge
-timezone: America/Bogota
+timezone: America/Bogota # IANA Time Zone. Default is local. See https://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 permalink: /:categories/:year-:month-:day/:title/
+#   "" | date | pretty | ordinal | none | /:categories/:short_year-:month-:day/:title/ (posts) | /:path/:basename:output_ext (pages)
 #defaults: # Default value is [].
 #  -
 #    scope:
@@ -47,7 +51,7 @@ kramdown:
 
 # Serve settings
 #host: 127.0.0.1 # Host IP or name.
-#baseurl: "" # the subpath of your site, e.g. /blog/
+#baseurl: "" # the subpath of your site, e.g. /blog
 #port: 4000
 #detach: false # detach server from terminal
 
@@ -62,7 +66,7 @@ kramdown:
 # Handling Reading
 #safe:         false # Disable custom plugins. Github Pages forces this to true.
 #include:      [".htaccess"] # Include these directories & files. Dot files are excluded by default.
-exclude:      [Gemfile, Gemfile.lock] # Exclude these directories & files.
+exclude:       [Gemfile, Gemfile.lock] # Default: ["node_modules", "vendor"] # Exclude these directories & files.
 #keep_files:   [".git", ".svn"] # Keep these directories & files in the destination directory.
 #encoding:     "utf-8"
 #markdown_ext: "markdown,mkdown,mkdn,mkd,md"
@@ -77,6 +81,8 @@ exclude:      [Gemfile, Gemfile.lock] # Exclude these directories & files.
 
 # Collections
 #collections:
+#  posts:
+#    output: true # (default)
 #  my_collection1:
 #    output: true # set to true to export the collection as html. Otherwise, use it as data inside other places.
 #    permalink: /awesome/:path/ # _my_collection1/subdir/file1.md will output as <dst>/awesome/subdir/file1/index.html .
