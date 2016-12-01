@@ -1,11 +1,9 @@
 # Site settings
-title: Megalac
+title: Megalac - Importación y exportación de lácteos y derivados
 email: gerencia.megalac@gmail.com
 description: > # this means to ignore newlines until "baseurl:"
-  Mercantil Ganadera y Láctea S.A.S. Write an awesome description for
-  your new site here. You can edit this line in _config.yml. It will
-  appear in your document head meta (for Google search results) and in
-  your feed.xml site description.
+  ¿Necesita importar o exportar en Colombia leche en polvo, productos lácteos,
+  o productos ganaderos? Con Megalac reducirá costos y aumentará su productividad.
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
 
 # Build settings
@@ -66,7 +64,7 @@ kramdown:
 # Handling Reading
 #safe:         false # Disable custom plugins. Github Pages forces this to true.
 #include:      [".htaccess"] # Include these directories & files. Dot files are excluded by default.
-exclude:       [Gemfile, Gemfile.lock] # Default: ["node_modules", "vendor"] # Exclude these directories & files.
+exclude:       [Gemfile, Gemfile.lock, README.md] # Default: ["node_modules", "vendor"] # Exclude these directories & files.
 #keep_files:   [".git", ".svn"] # Keep these directories & files in the destination directory.
 #encoding:     "utf-8"
 #markdown_ext: "markdown,mkdown,mkdn,mkd,md"
@@ -90,4 +88,5 @@ exclude:       [Gemfile, Gemfile.lock] # Default: ["node_modules", "vendor"] # E
 
 # Custom vars
 twitter_username: euphoric_juank
-github_username:  ruluk
+github_username:  megalac.github.io
+address: "Calle 6 # 6 - 10, vereda de Barandillas, Zipaquirá, Colombia"
