@@ -1,5 +1,42 @@
-.wrapper {
+@import "bourbon/bourbon", "neat/neat", "normalize/normalize", "variables", "fonts";
+
+body {
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  font-weight: $base-font-weight;
+  color: $text-color;
+  background-color: $background-color;
+}
+
+body, p {
+  line-height: $base-line-height;
+}
+
+a {
+  color: $brand-color;
+  text-decoration: none;
+
+  &:active, &:hover {
+    text-decoration: underline;
+  }
+}
+
+img {
   max-width: 100%;
-  padding-left: 5%;
-  padding-right: 5%;
+  height: auto;
+}
+
+header {
+}
+
+.logo {
+}
+
+.tag-line {
+}
+
+.main-description {
+}
+
+.secondary-description {
 }

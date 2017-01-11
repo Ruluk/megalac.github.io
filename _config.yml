@@ -1,7 +1,7 @@
 # Site settings
 title: Megalac - Importación y exportación de lácteos y derivados
 email: gerencia.megalac@gmail.com
-description: > # this means to ignore newlines until "baseurl:"
+description: > # this means to ignore newlines until "url:"
   ¿Necesita importar o exportar en Colombia leche en polvo, productos lácteos,
   o productos ganaderos? Con Megalac reducirá costos y aumentará su productividad.
 url: "" # the base hostname & protocol for your site, e.g. http://example.com
@@ -88,5 +88,6 @@ exclude:       [Gemfile, Gemfile.lock, README.md] # Default: ["node_modules", "v
 
 # Custom vars
 twitter_username: euphoric_juank
-github_username:  megalac.github.io
 address: "Calle 6 # 6 - 10, vereda de Barandillas, Zipaquirá, Colombia"
+phone: (+571) 851 8704
+cellphone: (+57) 313 347 7092
