@@ -3,14 +3,14 @@
     <a href="{{ '/' | relative_url}}">
       <img src="{{ '/assets/logo.png' | relative_url }}" alt="Logo de {{ site.title | split : ' - ' | first }}"/>
     </a>
+    <small class="tag-line" aria-label="Eslogan">{{ site.title | split: ' - ' | last }}</small>
   </div>
-  <div class="tag-line" aria-label="Eslogan">
-    {{ site.title | split: ' - ' | last }}
-  </div>
-  <div class="secondary-description" aria-label="Pregunta">
-    {{ site.description | split : '? ' | first }}?
-  </div>
-  <div class="main-description" aria-label="Descripción principal">
-    {{ site.description | split : '? ' | last }}
+  <div class="description">
+    <p class="secondary" aria-label="Pregunta">
+      {{ site.description | split : '? ' | first }}?
+    </p>
+    <p class="main" aria-label="Descripción principal">
+      {{ site.description | split : '? ' | last }}
+    </p>
   </div>
 </header>

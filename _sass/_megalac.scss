@@ -27,16 +27,65 @@ img {
 }
 
 header {
+  position: relative;
+  overflow: hidden;
+  background-color: $brand-color;
+
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 1;
+    right: -30%;
+    bottom: -25%;
+    width: 120%;
+    height: 75%;
+    border-top-left-radius: 100%;
+    background-color: transparentize(white, 0.9);
+  }
 }
 
-.logo {
+div.logo {
+  position: absolute;
+  top: 0;
+  left: 35%;
+  width: 30%;
+  margin-top: $spacing-small-unit;
+  text-align: center;
 }
 
-.tag-line {
+small.tag-line {
+  color: $grey-color-light;
 }
 
-.main-description {
-}
+.description {
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+  @include align-items(center);
+  position: relative;
+  z-index: 2;
+  height: 100%;
+  color: white;
 
-.secondary-description {
+  p {
+    text-align: center;
+    margin: 0;
+  }
+
+  p.main {
+      width: 70%;
+      font-size: 3.3em;
+      font-weight: bold;
+      line-height: 1.1;
+      color: $secondary-color;
+  }
+
+  p.secondary {
+    margin-bottom: 2 * $spacing-small-unit;
+    margin-top: 3 * $spacing-unit;
+    width: 45%;
+    font-size: 1.1em;
+    color: $grey-color-light;
+  }
 }
