@@ -8,10 +8,12 @@
       </li>
       {% endif %}
       {% if site.cellphone %}
-      <li>Celular: {{ site.cellphone }}</li>
+      <li>Celular: <a href="tel:{{ site.cellphone | replace : ')', '' | replace : '(', '' | replace : ' ', '' }}">
+        {{ site.cellphone }}</a></li>
       {% endif %}
       {% if site.phone %}
-      <li>Teléfono: {{ site.phone }}</li>
+      <li>Teléfono: <a href="tel:{{ site.phone | replace : ')', '' | replace : '(', '' | replace : ' ', '' }}">
+        {{ site.phone }}</a></li>
       {% endif %}
       {% if site.address %}
       <li>{{ site.address }}</li>
