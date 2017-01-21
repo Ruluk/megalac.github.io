@@ -83,13 +83,15 @@ small.tag-line {
     margin: 0;
   }
 
-  p.main {
+  h1.main {
+    margin: 0;
     width: 70%;
     font-family: $highlight-font-family;
     font-size: 3.3em;
     font-weight: bold;
     line-height: 1;
     color: $secondary-color;
+    text-align: center;
   }
 
   p.secondary {
