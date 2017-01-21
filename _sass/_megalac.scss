@@ -94,6 +94,33 @@ small.tag-line {
   }
 }
 
-#megalac-definition, #megalac-purpose, #megalac-team, #megalac-quotes, footer {
+footer {
+  @include clearfix;
+  padding: $spacing-unit;
+  background-color: $secondary-color;
+
+  h2 {
+    margin: 0 0 $spacing-unit;
+    font-family: $highlight-font-family;
+    font-size: 2em;
+    text-align: center;
+  }
+
+  div.contact-data, div.contact-social-media {
+    float: left;
+    width: 50%;
+  }
+
+  ul {
+    margin: 0;
+    list-style: none;
+  }
+
+  li + li {
+    margin-top: $spacing-small-unit;
+  }
+}
+
+#megalac-definition, #megalac-purpose, #megalac-team, #megalac-quotes {
   display: none;
 }
