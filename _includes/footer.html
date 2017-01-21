@@ -22,11 +22,11 @@
   </div>
   <div class="contact-social-media">
     <ul>
-      {% if site.twitter_username %}
-      <li>
-        {% include icon-twitter.html username=site.twitter_username %}
-      </li>
-      {% endif %}
+      {% for network in site.social_networks %}
+      <li><a href="{{ network.url }}">
+        <i class="fa fa-3x fa-{{ network.fa_icon }}" title="{{ network.title }}"></i>
+      </a></li>
+      {% endfor %}
     </ul>
   </div>
 </footer>
