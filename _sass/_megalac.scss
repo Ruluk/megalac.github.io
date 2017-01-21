@@ -36,12 +36,15 @@ header {
     display: block;
     position: absolute;
     z-index: 1;
-    right: -30%;
-    bottom: -25%;
-    width: 120%;
-    height: 75%;
+    right: -40%;
+    bottom: -40%;
+    width: 130%;
+    height: 110%;
     border-top-left-radius: 100%;
-    background-color: transparentize(white, 0.9);
+    border-color: transparentize(white, 0.95);
+    border-style: solid;
+    border-width: 190px 0;
+    //background-color: transparentize(white, 0.9);
   }
 }
 
