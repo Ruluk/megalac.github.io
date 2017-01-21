@@ -74,15 +74,16 @@ small.tag-line {
   }
 
   p.main {
-      width: 70%;
-      font-size: 3.3em;
-      font-weight: bold;
-      line-height: 1.1;
-      color: $secondary-color;
+    width: 70%;
+    font-family: $highlight-font-family;
+    font-size: 3.3em;
+    font-weight: bold;
+    line-height: 1;
+    color: $secondary-color;
   }
 
   p.secondary {
-    margin-bottom: 2 * $spacing-small-unit;
+    margin-bottom: $spacing-small-unit;
     margin-top: 3 * $spacing-unit;
     width: 45%;
     font-size: 1.1em;
