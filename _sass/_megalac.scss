@@ -1,5 +1,12 @@
 @import "variables", "bourbon/bourbon", "neat/neat", "normalize/normalize", "font-awesome/font-awesome", "fonts";
 
+// This should exist in Font Awesome. But it doesn't. Enlarges icon 50% more than line.
+.fa-xl {
+  font-size: 1.6667em;
+  line-height: 0.6em;
+  vertical-align: -30%;
+}
+
 body {
   font-family: $base-font-family;
   font-size: $base-font-size;
@@ -95,20 +102,26 @@ small.tag-line {
 }
 
 footer {
-  @include clearfix;
+  @include row;
   padding: $spacing-unit;
-  background-color: $secondary-color;
+  background-color: $background-color;
 
   h2 {
     margin: 0 0 $spacing-unit;
     font-family: $highlight-font-family;
-    font-size: 2em;
+    font-size: 2.2em;
     text-align: center;
-  }
+    color: $text-color;
 
-  div.contact-data, div.contact-social-media {
-    float: left;
-    width: 50%;
+    &::after {
+      content: '';
+      display: block;
+      margin: $spacing-small-unit auto 0;
+      width: 25%;
+      height: $divider-height;
+      border-radius: $divider-height / 2;
+      background-color: $brand-color;
+    }
   }
 
   ul {
@@ -118,6 +131,32 @@ footer {
 
   li + li {
     margin-top: $spacing-small-unit;
+  }
+
+  div.contact-data, div.contact-social-media {
+    @include span-columns(6);
+  }
+
+  div.contact-data {
+    li {
+      font-size: 1.2em;
+    }
+
+    a {
+      color: $text-color;
+    }
+
+    i {
+      display: inline-block;
+      margin-right: $spacing-small-unit;
+      width: $spacing-small-unit;
+      color: $brand-color;
+    }
+  }
+
+  span.email-at {
+    font-family: Arial, sans-serif;
+    color: $brand-color;
   }
 }
 

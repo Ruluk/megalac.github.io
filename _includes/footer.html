@@ -3,20 +3,28 @@
   <div class="contact-data">
     <ul>
       {% if site.email %}
-      <li><a href="mailto:{{ site.email }}">
-        {{ site.email | split : '@' | first }}<span class="email-at">@</span>{{ site.email | split : '@' | last }}</a>
+      <li><i class="fa fa-lg fa-envelope" aria-hidden="true"></i>
+        <a href="mailto:{{ site.email }}">
+          {{ site.email | split : '@' | first }}<span class="email-at">@</span>{{ site.email | split : '@' | last }}
+        </a>
       </li>
       {% endif %}
       {% if site.cellphone %}
-      <li>Celular: <a href="tel:{{ site.cellphone | replace : ')', '' | replace : '(', '' | replace : ' ', '' }}">
-        {{ site.cellphone }}</a></li>
+      <li><i class="fa fa-xl fa-mobile" aria-hidden="true"></i>
+        <a href="tel:{{ site.cellphone | replace : ')', '' | replace : '(', '' | replace : ' ', '' }}">
+          {{ site.cellphone }}
+        </a></li>
       {% endif %}
       {% if site.phone %}
-      <li>Teléfono: <a href="tel:{{ site.phone | replace : ')', '' | replace : '(', '' | replace : ' ', '' }}">
-        {{ site.phone }}</a></li>
+      <li><i class="fa fa-lg fa-phone-square" aria-hidden="true"></i>
+        <a href="tel:{{ site.phone | replace : ')', '' | replace : '(', '' | replace : ' ', '' }}">
+          {{ site.phone }}
+        </a></li>
       {% endif %}
       {% if site.address %}
-      <li>{{ site.address }}</li>
+      <li><i class="fa fa-lg fa-building" aria-hidden="true"></i>
+        {{ site.address }}
+      </li>
       {% endif %}
     </ul>
   </div>
