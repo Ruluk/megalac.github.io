@@ -1,6 +1,6 @@
 @import "variables", "bourbon/bourbon", "neat/neat", "normalize/normalize", "font-awesome/font-awesome", "fonts";
 
-// This should exist in Font Awesome. But it doesn't. Enlarges icon 50% more than line.
+// This should exist in Font Awesome. But it doesn't. Enlarges icon 66% more than line.
 .fa-xl {
   font-size: 1.6667em;
   line-height: 0.6em;
@@ -103,16 +103,66 @@ small.tag-line {
   }
 }
 
+%title {
+  margin: 0 0 $spacing-unit;
+  font-family: $highlight-font-family;
+  font-size: $title-font-size;
+  line-height: $title-line-height;
+  text-align: center;
+}
+
+#megalac-definition {
+  background-color: $secondary-color;
+  padding: $spacing-unit;
+
+  h2 {
+    @extend %title;
+  }
+
+  p.content-intro, p.content-body {
+    $dash-size: 4px;
+    $paragraph-width: 50%;
+    $paragraph-margin: 5%;
+    position: relative;
+    margin: 0 $paragraph-margin $spacing-unit;
+    border: $dash-size dashed transparent;
+    width: $paragraph-width;
+    font-size: 1.2em;
+
+    &:nth-child(odd) {
+      left: 100% - $paragraph-width - $paragraph-margin * 2;
+      padding: $spacing-small-unit $spacing-unit $spacing-small-unit 0;
+      border-right: $dash-size dashed $support-colors-red;
+    }
+
+    &:nth-child(even) {
+      left: 0;
+      padding: $spacing-small-unit 0 $spacing-small-unit $spacing-unit;
+      border-left: $dash-size dashed $support-colors-red;
+    }
+  }
+
+  p.content-ending {
+    margin: 0;
+    padding: $spacing-small-unit 0;
+    color: $brand-color;
+    text-align: center;
+  }
+
+  span.text-highlight {
+    font-size: 1.1em;
+    font-weight: bold;
+    color: $brand-color;
+  }
+}
+
 footer {
   @include row;
   padding: $spacing-unit;
   background-color: $background-color;
 
   h2 {
-    margin: 0 0 $spacing-unit;
-    font-family: $highlight-font-family;
-    font-size: 2.2em;
-    text-align: center;
+    @extend %title;
     color: $text-color;
 
     &::after {
@@ -162,6 +212,6 @@ footer {
   }
 }
 
-#megalac-definition, #megalac-purpose, #megalac-team, #megalac-quotes {
+#megalac-purpose, #megalac-team, #megalac-quotes {
   display: none;
 }
