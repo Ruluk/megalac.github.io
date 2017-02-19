@@ -47,11 +47,9 @@ header {
     bottom: -40%;
     width: 130%;
     height: 110%;
+    border: 0 solid transparentize(white, 0.95);
+    border-top-width: 190px;
     border-top-left-radius: 100%;
-    border-color: transparentize(white, 0.95);
-    border-style: solid;
-    border-width: 190px 0;
-    //background-color: transparentize(white, 0.9);
   }
 }
 
@@ -112,11 +110,48 @@ small.tag-line {
 }
 
 #megalac-definition {
+  $milk-small-height: 50px;
+  $milk-big-height: 190px;
+  position: relative;
+  overflow: hidden;
   background-color: $secondary-color;
   padding: $spacing-unit;
 
+  &::before {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    right: 65%;
+    bottom: calc(#{$milk-small-height / 2} - 30%);
+    width: 50%;
+    height: 80%;
+    border: 0 solid transparentize(white, 0.9);
+    border-top-width: $milk-small-height;
+    border-left-width: $milk-big-height;
+    border-top-left-radius: 100%;
+  }
+
+  &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    left: 35%;
+    top: calc(#{$milk-small-height / 2} - 30%);
+    width: 50%;
+    height: 80%;
+    border: 0 solid transparentize(white, 0.9);
+    border-bottom-width: $milk-small-height;
+    border-right-width: $milk-big-height;
+    border-bottom-right-radius: 100%;
+  }
+
   h2 {
     @extend %title;
+    position: relative;
+    z-index: 1;
+    color: $brand-color;
   }
 
   p.content-intro, p.content-body {
@@ -124,29 +159,31 @@ small.tag-line {
     $paragraph-width: 50%;
     $paragraph-margin: 5%;
     position: relative;
-    margin: 0 $paragraph-margin $spacing-unit;
-    border: $dash-size dashed transparent;
+    margin: 0 $paragraph-margin $spacing-small-unit;
     width: $paragraph-width;
     font-size: 1.2em;
+    z-index: 1;
 
     &:nth-child(odd) {
       left: 100% - $paragraph-width - $paragraph-margin * 2;
-      padding: $spacing-small-unit $spacing-unit $spacing-small-unit 0;
-      border-right: $dash-size dashed $support-colors-red;
+      padding: $spacing-unit $spacing-unit $spacing-unit 0;
+      border-right: $dash-size dashed $brand-color;
     }
 
     &:nth-child(even) {
       left: 0;
-      padding: $spacing-small-unit 0 $spacing-small-unit $spacing-unit;
-      border-left: $dash-size dashed $support-colors-red;
+      padding: $spacing-unit 0 $spacing-unit $spacing-unit;
+      border-left: $dash-size dashed $brand-color;
     }
   }
 
   p.content-ending {
+    position: relative;
     margin: 0;
     padding: $spacing-small-unit 0;
     color: $brand-color;
     text-align: center;
+    z-index: 1;
   }
 
   span.text-highlight {
