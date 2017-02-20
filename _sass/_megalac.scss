@@ -192,17 +192,52 @@ small.tag-line {
 }
 
 #megalac-purpose {
+  $milk-small-height: 80px;
+  $milk-big-height: 220px;
+  position: relative;
+  overflow: hidden;
   background-color: $support-colors-cyan;
   padding: $spacing-unit;
   color: white;
 
+  &::before, &::after {
+    content: '';
+    display: block;
+    position: absolute;
+    z-index: 0;
+    border: 0 solid transparentize(white, 0.95);
+  }
+
+  &::before {
+    right: calc(60% - #{$milk-small-height / 2});
+    top: -10%;
+    width: 45%;
+    height: 60%;
+    border-right-width: $milk-small-height;
+    border-top-right-radius: 90%;
+  }
+
+  &::after {
+    left: calc(40% - #{$milk-small-height / 2});
+    top: 50%;
+    width: 70%;
+    height: 80%;
+    border-bottom-width: $milk-big-height;
+    border-left-width: $milk-small-height;
+    border-bottom-left-radius: 100%;
+  }
+
   h2 {
     @extend %title;
+    position: relative;
+    z-index: 1;
     margin: 0;
   }
 
   ul {
     @include clearfix;
+    position: relative;
+    z-index: 1;
     margin: 0;
     padding: 0 $spacing-unit * 2;
 
