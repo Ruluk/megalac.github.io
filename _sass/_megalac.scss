@@ -109,6 +109,18 @@ small.tag-line {
   text-align: center;
 }
 
+@mixin title-divider {
+  &::after {
+    content: '';
+    display: block;
+    margin: $spacing-small-unit auto 0;
+    width: 25%;
+    height: $divider-height;
+    border-radius: $divider-height / 2;
+    background-color: $brand-color;
+  }
+}
+
 #megalac-definition {
   $milk-small-height: 50px;
   $milk-big-height: 190px;
@@ -267,6 +279,52 @@ small.tag-line {
   }
 }
 
+#megalac-team {
+  padding: $spacing-unit;
+
+  h2 {
+    @extend %title;
+    @include title-divider;
+  }
+
+  div.teammate {
+    display: -webkit-flex;
+    display: flex;
+    -webkit-flex-direction: row;
+    flex-direction: row;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 0 $spacing-unit;
+
+    img {
+      display: block;
+      width: 200px;
+      height: 200px;
+      border-radius: 50%;
+      margin-right: $spacing-unit;
+    }
+  }
+
+  div.teammate-details {
+    h3 {
+      margin: 0;
+      font-family: $highlight-font-family;
+      font-size: 1.5em;
+      color: $brand-color;
+    }
+
+    h4 {
+      font-size: 1em;
+      font-weight: normal;
+      color: $grey-color-dark;
+    }
+
+    p:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
 footer {
   @include row;
   padding: $spacing-unit;
@@ -274,17 +332,7 @@ footer {
 
   h2 {
     @extend %title;
-    color: $text-color;
-
-    &::after {
-      content: '';
-      display: block;
-      margin: $spacing-small-unit auto 0;
-      width: 25%;
-      height: $divider-height;
-      border-radius: $divider-height / 2;
-      background-color: $brand-color;
-    }
+    @include title-divider;
   }
 
   ul {
@@ -323,6 +371,6 @@ footer {
   }
 }
 
-#megalac-team, #megalac-quotes {
+#megalac-quotes {
   display: none;
 }
