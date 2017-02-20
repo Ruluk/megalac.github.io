@@ -325,6 +325,47 @@ small.tag-line {
   }
 }
 
+#megalac-quotes {
+  $side-margin: 15%;
+  position: relative;
+  padding: $spacing-unit;
+  background-color: $brand-color;
+  color: white;
+
+  &::before {
+    content: $fa-var-quote-left;
+    position: absolute;
+    display: block;
+    top: $spacing-small-unit;
+    left: $side-margin;
+    font-size: $spacing-unit * 2;
+    font-family: FontAwesome, sans-serif;
+    color: transparentize(white, 0.9);
+    z-index: 0;
+  }
+
+  blockquote {
+    position: relative;
+    margin: 0 $side-margin;
+    text-align: center;
+    z-index: 1;
+
+    q {
+      font-size: 1.8em;
+      font-style: italic;
+      color: transparentize(white, 0.35);
+
+      &::before, &::after {
+        content: none;
+      }
+    }
+
+    span {
+      display: none;
+    }
+  }
+}
+
 footer {
   @include row;
   padding: $spacing-unit;
@@ -369,8 +410,4 @@ footer {
     font-family: Arial, sans-serif;
     color: $brand-color;
   }
-}
-
-#megalac-quotes {
-  display: none;
 }
