@@ -255,8 +255,7 @@ small.tag-line {
 
     > li {
       $item-width: 44%;
-      display: -webkit-flex;
-      display: flex;
+      @include display(flex);
       list-style: none;
       float: left;
       margin: $spacing-unit (50% - $item-width) / 2 0;
@@ -288,12 +287,9 @@ small.tag-line {
   }
 
   div.teammate {
-    display: -webkit-flex;
-    display: flex;
-    -webkit-flex-direction: row;
-    flex-direction: row;
-    -webkit-align-items: center;
-    align-items: center;
+    @include display(flex);
+    @include flex-direction(row);
+    @include align-items(center);
     padding: 0 $spacing-unit;
 
     img {
@@ -391,15 +387,19 @@ footer {
 
   div.contact-data {
     li {
+      @include display(flex);
+      @include flex-direction(row);
+      @include align-items(center);
       font-size: 1.2em;
     }
 
     a {
+      display: block;
       color: $text-color;
     }
 
     i {
-      display: inline-block;
+      display: block;
       margin-right: $spacing-small-unit;
       width: $spacing-small-unit;
       color: $brand-color;
