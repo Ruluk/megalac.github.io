@@ -117,31 +117,29 @@ small.tag-line {
   background-color: $secondary-color;
   padding: $spacing-unit;
 
-  &::before {
+  &::before, &::after {
     content: '';
     display: block;
     position: absolute;
     z-index: 0;
-    right: 65%;
-    bottom: calc(#{$milk-small-height / 2} - 30%);
-    width: 50%;
-    height: 80%;
     border: 0 solid transparentize(white, 0.9);
+  }
+
+  &::before {
+    right: 55%;
+    bottom: calc(#{$milk-small-height / 2} - 30%);
+    width: 60%;
+    height: 80%;
     border-top-width: $milk-small-height;
     border-left-width: $milk-big-height;
     border-top-left-radius: 100%;
   }
 
   &::after {
-    content: '';
-    display: block;
-    position: absolute;
-    z-index: 0;
-    left: 35%;
+    left: 45%;
     top: calc(#{$milk-small-height / 2} - 30%);
     width: 50%;
     height: 80%;
-    border: 0 solid transparentize(white, 0.9);
     border-bottom-width: $milk-small-height;
     border-right-width: $milk-big-height;
     border-bottom-right-radius: 100%;
