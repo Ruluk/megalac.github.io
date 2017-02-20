@@ -193,6 +193,47 @@ small.tag-line {
   }
 }
 
+#megalac-purpose {
+  background-color: $support-colors-cyan;
+  padding: $spacing-unit;
+  color: white;
+
+  h2 {
+    @extend %title;
+    margin: 0;
+  }
+
+  ul {
+    @include clearfix;
+    margin: 0;
+    padding: 0 $spacing-unit * 2;
+
+    > li {
+      $item-width: 44%;
+      display: -webkit-flex;
+      display: flex;
+      list-style: none;
+      float: left;
+      margin: $spacing-unit (50% - $item-width) / 2 0;
+      border: 1px solid white;
+      border-radius: $spacing-small-unit;
+      padding: 0 $spacing-unit;
+      width: $item-width;
+      height: $spacing-unit * 2;
+
+      &:last-child {
+        width: $item-width + 50%;
+      }
+
+      span {
+        margin: auto;
+        text-align: center;
+        font-size: 1.1em;
+      }
+    }
+  }
+}
+
 footer {
   @include row;
   padding: $spacing-unit;
@@ -249,6 +290,6 @@ footer {
   }
 }
 
-#megalac-purpose, #megalac-team, #megalac-quotes {
+#megalac-team, #megalac-quotes {
   display: none;
 }
