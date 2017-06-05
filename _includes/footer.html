@@ -1,32 +1,35 @@
 <footer>
   <h2>Contáctenos y cotice con nosotros</h2>
   <div class="contact-data">
+    {% for contact in site.contacts %}
     <ul>
-      {% if site.email %}
+      {% if contact.email %}
       <li><i class="fa fa-lg fa-envelope" aria-hidden="true"></i>
-        <a href="mailto:{{ site.email }}">
-          {{ site.email | split : '@' | first }}<span class="email-at">@</span>{{ site.email | split : '@' | last }}
+        <a href="mailto:{{ contact.email }}">
+          {% assign split_email = contact.email | split : '@' %}
+          {{ split_email | first }}<span class="email-at">@</span>{{ split_email | last }}
         </a>
       </li>
       {% endif %}
-      {% if site.cellphone %}
+      {% if contact.cellphone %}
       <li><i class="fa fa-xl fa-mobile" aria-hidden="true"></i>
-        <a href="tel:{{ site.cellphone | replace : ')', '' | replace : '(', '' | replace : ' ', '' }}">
-          {{ site.cellphone }}
+        <a href="tel:{{ contact.cellphone | replace : ')', '' | replace : '(', '' | replace : ' ', '' }}">
+          {{ contact.cellphone }}
         </a></li>
       {% endif %}
-      {% if site.phone %}
+      {% if contact.phone %}
       <li><i class="fa fa-lg fa-phone-square" aria-hidden="true"></i>
-        <a href="tel:{{ site.phone | replace : ')', '' | replace : '(', '' | replace : ' ', '' }}">
-          {{ site.phone }}
+        <a href="tel:{{ contact.phone | replace : ')', '' | replace : '(', '' | replace : ' ', '' }}">
+          {{ contact.phone }}
         </a></li>
       {% endif %}
-      {% if site.address %}
+      {% if contact.address %}
       <li><i class="fa fa-lg fa-building" aria-hidden="true"></i>
-        {{ site.address }}
+        {{ contact.address }}
       </li>
       {% endif %}
     </ul>
+    {% endfor %}
   </div>
   <div class="contact-social-media">
     <ul>

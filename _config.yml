@@ -1,6 +1,5 @@
 # Site settings
 title: Megalac - Importación y exportación de lácteos y derivados
-email: gilberto.nino@megalac.com.co
 description: > # this means to ignore newlines until "url:"
   ¿Necesita importar o exportar en Colombia leche en polvo o productos lácteos
   o ganaderos? Con Megalac reducirá costos y aumentará su productividad.
@@ -96,6 +95,13 @@ social_networks:
     fa_icon: facebook-square
     url: //fb.me/megalacsas
     title: Facebook
-address: "Calle 6 # 6 - 10, vereda de Barandillas, Zipaquirá, Colombia"
-phone: (+571) 851 8704
-cellphone: (+57) 313 347 7092
+contacts:
+  -
+    address: "Calle 6 # 6 - 10, vereda de Barandillas, Zipaquirá, Colombia"
+    email: gilberto.nino@megalac.com.co
+    phone: (+571) 851 8704
+    cellphone: (+57) 318 709 7636
+  -
+    address: "2670 NW 84th Way, Cooper City, Fl, USA, 33024"
+    email: carlos.jimenez@megalac.com.co
+    phone: (+1) 786 942 0262

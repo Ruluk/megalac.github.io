@@ -377,6 +377,10 @@ footer {
     list-style: none;
   }
 
+  ul + ul {
+    margin-top: $spacing-unit;
+  }
+
   li + li {
     margin-top: $spacing-small-unit;
   }
