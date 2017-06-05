@@ -102,11 +102,15 @@ small.tag-line {
 }
 
 %title {
-  margin: 0 0 $spacing-unit;
+  margin: 0 0 $spacing-small-unit;
   font-family: $highlight-font-family;
   font-size: $title-font-size;
   line-height: $title-line-height;
   text-align: center;
+
+  @include media($size-s) {
+    margin-bottom: $spacing-unit;
+  }
 }
 
 @mixin title-divider {
@@ -127,14 +131,22 @@ small.tag-line {
   position: relative;
   overflow: hidden;
   background-color: $secondary-color;
-  padding: $spacing-unit;
+  padding: $spacing-small-unit;
+
+  @include media($size-s) {
+    padding: $spacing-unit;
+  }
 
   &::before, &::after {
     content: '';
     display: block;
     position: absolute;
     z-index: 0;
-    border: 0 solid transparentize(white, 0.9);
+    border: none;
+
+    @include media($size-s) {
+      border: 0 solid transparentize(white, 0.9);
+    }
   }
 
   &::before {
@@ -166,24 +178,47 @@ small.tag-line {
 
   p.content-intro, p.content-body {
     $dash-size: 4px;
-    $paragraph-width: 50%;
     $paragraph-margin: 5%;
     position: relative;
     margin: 0 $paragraph-margin $spacing-small-unit;
-    width: $paragraph-width;
+    width: 100% - $paragraph-margin * 2;
     font-size: 1.2em;
+    text-align: center;
     z-index: 1;
 
-    &:nth-child(odd) {
-      left: 100% - $paragraph-width - $paragraph-margin * 2;
-      padding: $spacing-unit $spacing-unit $spacing-unit 0;
-      border-right: $dash-size dashed $brand-color;
+    @include media($size-s) {
+      $paragraph-width: 70%;
+      width: $paragraph-width;
+      text-align: left;
+
+      &:nth-child(odd) {
+        left: 100% - $paragraph-width - $paragraph-margin * 2;
+        padding: $spacing-small-unit $spacing-small-unit $spacing-small-unit 0;
+        border-right: $dash-size dashed $brand-color;
+      }
+
+      &:nth-child(even) {
+        left: 0;
+        padding: $spacing-small-unit 0 $spacing-small-unit $spacing-small-unit;
+        border-left: $dash-size dashed $brand-color;
+      }
     }
 
-    &:nth-child(even) {
-      left: 0;
-      padding: $spacing-unit 0 $spacing-unit $spacing-unit;
-      border-left: $dash-size dashed $brand-color;
+    @include media($size-m) {
+      $paragraph-width: 50%;
+      width: $paragraph-width;
+
+      &:nth-child(odd) {
+        left: 100% - $paragraph-width - $paragraph-margin * 2;
+        padding: $spacing-unit $spacing-unit $spacing-unit 0;
+        border-right: $dash-size dashed $brand-color;
+      }
+
+      &:nth-child(even) {
+        left: 0;
+        padding: $spacing-unit 0 $spacing-unit $spacing-unit;
+        border-left: $dash-size dashed $brand-color;
+      }
     }
   }
 
