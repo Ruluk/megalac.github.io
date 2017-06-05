@@ -471,9 +471,16 @@ small.tag-line {
 }
 
 footer {
-  @include row;
-  padding: $spacing-unit;
+  padding: $spacing-small-unit;
   background-color: $background-color;
+
+  @include media($size-s) {
+    padding: $spacing-unit;
+  }
+
+  @include media($size-m) {
+    @include row;
+  }
 
   h2 {
     @extend %title;
@@ -482,6 +489,7 @@ footer {
 
   ul {
     margin: 0;
+    padding: 0;
     list-style: none;
   }
 
@@ -493,8 +501,10 @@ footer {
     margin-top: $spacing-small-unit;
   }
 
-  div.contact-data, div.contact-social-media {
-    @include span-columns(6);
+  @include media($size-m) {
+    div.contact-data, div.contact-social-media {
+      @include span-columns(6);
+    }
   }
 
   div.contact-data {
@@ -502,7 +512,13 @@ footer {
       @include display(flex);
       @include flex-direction(row);
       @include align-items(center);
-      font-size: 1.2em;
+      font-size: 1.1em;
+      word-break: break-all;
+
+      @include media($size-s) {
+        font-size: 1.2em;
+        word-break: normal;
+      }
     }
 
     a {
@@ -515,6 +531,32 @@ footer {
       margin-right: $spacing-small-unit;
       width: $spacing-small-unit;
       color: $brand-color;
+    }
+  }
+
+  div.contact-social-media {
+    margin-top: $spacing-unit;
+
+    @include media($size-m) {
+      margin-top: 0;
+    }
+
+    ul {
+      text-align: center;
+
+      @include media($size-m) {
+        text-align: left;
+      }
+    }
+
+    li {
+      display: inline-block;
+      margin: $spacing-small-unit / 2;
+
+      @include media($size-m) {
+        display: block;
+        margin: 0;
+      }
     }
   }
 
