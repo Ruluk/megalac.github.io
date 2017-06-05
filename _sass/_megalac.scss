@@ -350,7 +350,11 @@ small.tag-line {
 }
 
 #megalac-team {
-  padding: $spacing-unit;
+  padding: $spacing-small-unit;
+
+  @include media($size-s) {
+    padding: $spacing-unit;
+  }
 
   h2 {
     @extend %title;
@@ -358,21 +362,42 @@ small.tag-line {
   }
 
   div.teammate {
-    @include display(flex);
-    @include flex-direction(row);
-    @include align-items(center);
-    padding: 0 $spacing-unit;
+    @include media($size-s) {
+      @include display(flex);
+      @include flex-direction(row);
+      @include align-items(center);
+    }
+
+    @include media($size-m) {
+      padding: 0 $spacing-unit;
+    }
 
     img {
       display: block;
-      width: 200px;
-      height: 200px;
+      margin: auto;
       border-radius: 50%;
-      margin-right: $spacing-unit;
+      @include size(150px);
+
+      @include media($size-s) {
+        margin: 0 $spacing-small-unit 0 0;
+      }
+
+      @include media($size-m) {
+        @include size(200px);
+        margin-right: $spacing-unit;
+      }
     }
   }
 
   div.teammate-details {
+    margin-top: $spacing-small-unit;
+    text-align: center;
+
+    @include media($size-s) {
+      margin-top: 0;
+      text-align: left;
+    }
+
     h3 {
       margin: 0;
       font-family: $highlight-font-family;
