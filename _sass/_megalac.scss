@@ -420,9 +420,13 @@ small.tag-line {
 #megalac-quotes {
   $side-margin: 15%;
   position: relative;
-  padding: $spacing-unit;
+  padding: $spacing-small-unit;
   background-color: $brand-color;
   color: white;
+
+  @include media($size-s) {
+    padding: $spacing-unit;
+  }
 
   &::before {
     content: $fa-var-quote-left;
@@ -430,10 +434,14 @@ small.tag-line {
     display: block;
     top: $spacing-small-unit;
     left: $side-margin;
-    font-size: $spacing-unit * 2;
+    font-size: $spacing-unit;
     font-family: FontAwesome, sans-serif;
     color: transparentize(white, 0.9);
     z-index: 0;
+
+    @include media($size-s) {
+      font-size: $spacing-unit * 2;
+    }
   }
 
   blockquote {
@@ -443,9 +451,13 @@ small.tag-line {
     z-index: 1;
 
     q {
-      font-size: 1.8em;
+      font-size: 1.3em;
       font-style: italic;
       color: transparentize(white, 0.35);
+
+      @include media($size-s) {
+        font-size: 1.8em;
+      }
 
       &::before, &::after {
         content: none;
