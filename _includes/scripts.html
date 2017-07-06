@@ -1,6 +1,11 @@
 <script>
   window.addEventListener( "resize", function () {
-    document.getElementsByTagName("header")[0].style.height = window.innerHeight + "px";
-  });
+    var header = document.getElementsByTagName( "header" )[ 0 ];
+    if ( window.innerWidth >= 800 ) {
+      header.style.height = window.innerHeight + "px";
+    } else {
+      header.style.height = "auto";
+    }
+  } );
   window.dispatchEvent( new Event( "resize" ) );
 </script>

@@ -56,10 +56,15 @@ header {
 div.logo {
   position: absolute;
   top: 0;
-  left: 35%;
-  width: 30%;
+  left: 20%;
+  width: 60%;
   margin-top: $spacing-small-unit;
   text-align: center;
+
+  @include media($size-s) {
+    left: 35%;
+    width: 30%;
+  }
 }
 
 small.tag-line {
@@ -82,22 +87,35 @@ small.tag-line {
   }
 
   h1.main {
-    margin: 0;
-    width: 70%;
+    margin: 0 0 $spacing-unit;
+    width: 90%;
     font-family: $highlight-font-family;
-    font-size: 3.3em;
+    font-size: 2em;
     font-weight: bold;
     line-height: 1;
     color: $secondary-color;
     text-align: center;
+
+    @include media($size-s) {
+      width: 70%;
+      font-size: 3.3em;
+    }
+
+    @include media($size-m) {
+      margin-bottom: 0;
+    }
   }
 
   p.secondary {
     margin-bottom: $spacing-small-unit;
     margin-top: 3 * $spacing-unit;
-    width: 45%;
+    width: 90%;
     font-size: 1.1em;
     color: white;
+
+    @include media($size-s) {
+      width: 45%;
+    }
   }
 }
 
